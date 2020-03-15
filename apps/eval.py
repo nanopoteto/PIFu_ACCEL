@@ -108,9 +108,9 @@ class Evaluator:
 if __name__ == '__main__':
     evaluator = Evaluator(opt)
 
-    test_images = glob.glob(os.path.join(opt.test_folder_path, '*'))
-    test_images = [f for f in test_images if ('png' in f or 'jpg' in f) and (not 'mask' in f)]
-    test_masks = [f[:-4]+'_mask.png' for f in test_images]
+    # test_images = glob.glob(os.path.join(opt.test_folder_path, '*'))
+    # test_images = [f for f in test_images if ('png' in f or 'jpg' in f) and (not 'mask' in f)]
+    # test_masks = [f[:-4]+'_mask.png' for f in test_images]
 
     print("num; ", len(test_masks))
 

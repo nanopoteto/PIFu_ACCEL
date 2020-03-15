@@ -19,8 +19,14 @@ VOL_RES=256
 CHECKPOINTS_NETG_PATH='./checkpoints/net_G'
 CHECKPOINTS_NETC_PATH='./checkpoints/net_C'
 
+# Reset input_images folder
+rm -rf ./input_images
+mkdir ./input_images
+
 # Set "Image Path"
-TEST_FOLDER_PATH=$1
+FILE_NAME=$1
+BASE_NAME=${FILE_NAME##*/}
+cp $1 ./input_images/$BASE_NAME
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./apps/eval.py \
@@ -34,6 +40,6 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python ./apps/eval.py \
     --hg_down 'ave_pool' \
     --norm 'group' \
     --norm_color 'group' \
-    --test_folder_path ${TEST_FOLDER_PATH} \
+    --test_folder_path ./input_images \
     --load_netG_checkpoint_path ${CHECKPOINTS_NETG_PATH} \
     --load_netC_checkpoint_path ${CHECKPOINTS_NETC_PATH}
