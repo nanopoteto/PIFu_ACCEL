@@ -19,6 +19,7 @@ VOL_RES=256
 CHECKPOINTS_NETG_PATH='./checkpoints/net_G'
 CHECKPOINTS_NETC_PATH='./checkpoints/net_C'
 
+# Set "Image Path"
 TEST_FOLDER_PATH='./sample_images'
 
 # command
