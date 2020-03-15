@@ -29,7 +29,7 @@ BASE_NAME=${FILE_NAME##*/}
 cp $1 ./input_images/$BASE_NAME
 
 # command
-CUDA_VISIBLE_DEVICES=${GPU_ID} python ./apps/eval.py \
+CUDA_VISIBLE_DEVICES=${GPU_ID} python ./apps/eval_mlab.py \
     --name ${NAME} \
     --batch_size ${BATCH_SIZE} \
     --mlp_dim ${MLP_DIM} \
