@@ -20,7 +20,7 @@ CHECKPOINTS_NETG_PATH='./checkpoints/net_G'
 CHECKPOINTS_NETC_PATH='./checkpoints/net_C'
 
 # Set "Image Path"
-TEST_FOLDER_PATH='./sample_images'
+TEST_FOLDER_PATH=$1
 
 # command
 CUDA_VISIBLE_DEVICES=${GPU_ID} python ./apps/eval.py \
